@@ -13,7 +13,7 @@ import org.springframework.context.annotation.FilterType;
         지정하지 않으면 디폴트로 componentScan이 붙은 클래스의 패키지가 시작 위치가 된다.
         여기선 hello.core.
          관례적으로 설정정보 클래스를 프로젝트의 최상단에 둔다. */
-        basePackages  ="hello.core.member",
+        basePackages  ="hello.core",
         excludeFilters = @ComponentScan.Filter(
                 type = FilterType.ANNOTATION, classes = Configuration.class))
 public class AutoAppConfig {

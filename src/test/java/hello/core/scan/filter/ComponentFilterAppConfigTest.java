@@ -21,7 +21,7 @@ public class ComponentFilterAppConfigTest {
         assertThat(beanA).isNotNull();
 
 //         BeanB는 includeFilters에 걸리지 않아서 스프링 빈에 등록되지 않는다.
-        //BeanB beanB = ac.getBean("beanB", BeanB.class);
+        //BeanB beanB = ac.getBean("beanB", BeanB.class);0
         assertThrows(
                 NoSuchBeanDefinitionException.class,
                 () -> ac.getBean("beanB", BeanB.class));
