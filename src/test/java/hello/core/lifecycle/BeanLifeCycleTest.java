@@ -15,7 +15,6 @@ public class BeanLifeCycleTest {
         NetworkClient client = ac.getBean(NetworkClient.class);
         ac.close(); // 스프링 컨테이너를 종료, ConfigurableApplicationContext의 close()를 호출해야 한다.
     }
-
     @Configuration
     static class LifeCycleConfig{
         //@Bean(initMethod = "init", destroyMethod = "close")
@@ -25,6 +24,5 @@ public class BeanLifeCycleTest {
             networkClient.setUrl("http://hello-spring.dev");
             return networkClient;
         }
-
     }
 }
